@@ -6,12 +6,12 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Angel Campos Muñoz",
-            "email": "angel.campos.m@outlook.com"
-        },
-        {
             "name": "Anthony Vancauwenberghe",
             "email": "anthony@sealution.io"
+        },
+        {
+            "name": "Angel Campos Muñoz",
+            "email": "angel.campos.m@outlook.com"
         }
     ],
     "require": {

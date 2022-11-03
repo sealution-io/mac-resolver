@@ -1,21 +1,15 @@
 # mac-vendor-lookup
 
-<p align="center">
-
-[![StyleCI](https://github.styleci.io/repos/380829434/shield?branch=master)](https://github.styleci.io/repos/380829434)
-
-</p>
-
 <p>This PHP package allows you to get the information related to an <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> <abbr title="Organizationally Unique Identifier">OUI</abbr> assignment from a Laravel application.</p>
 
-<p>The <strong>mac-vendor-lookup</strong> package downloads the OUI mapping information in <abbr title="Comma Separated Values">CSV</abbr> format from the IEEE website. Then it processes the CSV files and later stores the OUI assignment details in tables in the database.</p>
+<p>The <strong>mac-resolver</strong> package downloads the OUI mapping information in <abbr title="Comma Separated Values">CSV</abbr> format from the IEEE website. Then it processes the CSV files and later stores the OUI assignment details in tables in the database.</p>
 
 ## Install
 
 You can install the package via [composer](https://getcomposer.org/):
 
 ```bash
-composer require acamposm/mac-vendor-lookup
+composer require sealution/mac-resolver
 ```
 
 Then publish the assets with this command:
@@ -97,21 +91,14 @@ php artisan mac:vendor 00-15-5D-81-E0-B0
  ------------- -----------------------
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-# Contributing
-
-Thank you for considering contributing to the improvement of the package. Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
 ## Security Vulnerabilities
 
-If you discover any security related issues, please send an e-mail to Angel Campos via [angel.campos.m@outlook.com](mailto:angel.campos.m@outlook.com) instead of using the issue tracker. All security vulnerabilities will be promptly addressed.
+If you discover any security related issues, please open an issue on the GitHub repository(
 
 ## Credits
 
 - [Angel Campos](https://github.com/angelcamposm)
+- [Anthony Vancauwenberghe](https://github.com/anthonyvancauwenberghe)
 
 ## License
 
