@@ -59,6 +59,7 @@ class DownloadOuiFileFromIeeeWebPage extends Command
         self::createDirectory();
 
         if ($choice === 'All') {
+            $this->drawTitle();
             foreach (OuiType::NAMES as $file) {
                 self::downloadRecipe($file, $this->option('manual'));
             }
@@ -75,7 +76,7 @@ class DownloadOuiFileFromIeeeWebPage extends Command
     private function createDirectory(): void
     {
         if (!Storage::exists('ieee')) {
-            $this->info(' Creating initial directory.');
+            $this->info(' Creating ieee directory.');
 
             Storage::makeDirectory('ieee');
         }

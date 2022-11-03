@@ -47,10 +47,11 @@ class SeedTableFromOuiFile extends Command
     {
 
         $choice = $this->option('file');
+        $this->drawTitle();
 
         if ($choice === 'All') {
             $names = ($this->getFilesNames());
-            foreach($names as $name){
+            foreach ($names as $name) {
                 $this->file = new OuiFile(
                     $name,
                     true
@@ -78,8 +79,6 @@ class SeedTableFromOuiFile extends Command
      */
     private function processCsv(): array
     {
-        $this->info(' Processing the CSV file');
-
         $csv = array_map('str_getcsv', file(storage_path($this->file->fullPath())));
 
         array_shift($csv);
@@ -118,15 +117,23 @@ class SeedTableFromOuiFile extends Command
     }
 
     /**
+     * Draws the title of the command.
+     */
+    private function drawTitle()
+    {
+        $this->comment('┌─────────────────────────────────────────────────────────────────────────────┐');
+        $this->comment('│                    IEEE MAC Address Synchronization                         │');
+        $this->comment('└─────────────────────────────────────────────────────────────────────────────┘');
+    }
+
+    /**
      * Seed the table ieee_oui_vendors.
      *
      * @param array $csv
      */
     private function seedTable(array $csv): void
     {
-        $this->info(' Seeding the table ieee_oui_assignments');
-
-        // $chunks = (collect($csv))->chunk(100);
+        $this->info(' Sycning ' . count($csv) . ' records from ' . $this->file->name());
 
         $this->output->progressStart(count($csv));
         $errors = [];
@@ -147,8 +154,11 @@ class SeedTableFromOuiFile extends Command
 
         $this->output->progressFinish();
 
+        if (count($errors) > 0)
+            $this->error('Failed to insert ' . count($errors) . ' records.');
         foreach ($errors as $error) {
             $this->warn($error);
         }
+        $this->comment('─────────────────────────────────────────────────────────────────────────────');
     }
 }

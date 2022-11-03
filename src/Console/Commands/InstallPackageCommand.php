@@ -46,14 +46,14 @@ class InstallPackageCommand extends Command
         $this->info('Publishing configuration...');
 
         $this->call('vendor:publish', [
-            '--provider' => 'Sealution\MacResolver\Providers\MacVendorLookupServiceProvider',
+            '--provider' => 'Sealution\MacResolver\Providers\MacResolverServiceProvider',
             '--tag'      => 'config',
         ]);
 
         $this->info('Publishing migrations...');
 
         $this->call('vendor:publish', [
-            '--provider' => 'Sealution\MacResolver\Providers\MacVendorLookupServiceProvider',
+            '--provider' => 'Sealution\MacResolver\Providers\MacResolverServiceProvider',
             '--tag'      => 'migrations',
         ]);
 

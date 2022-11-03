@@ -41,10 +41,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sealution\\MacResolver\\Providers\\MacVendorLookupServiceProvider"
+                "Sealution\\MacResolver\\Providers\\MacResolverServiceProvider"
             ],
             "aliases": {
-                "MacVendorLookup": "Sealution\\MacResolver\\Facades\\MacVendorLookupFacade"
             }
         }
     },

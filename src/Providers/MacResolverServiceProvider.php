@@ -9,7 +9,7 @@ use Sealution\MacResolver\Console\Commands\InstallPackageCommand;
 use Sealution\MacResolver\Console\Commands\SeedTableFromOuiFile;
 use Illuminate\Support\ServiceProvider;
 
-class MacVendorLookupServiceProvider extends ServiceProvider
+class MacResolverServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
