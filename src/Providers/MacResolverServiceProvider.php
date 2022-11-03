@@ -8,6 +8,7 @@ use Sealution\MacResolver\Console\Commands\GetVendorDetailsCommand;
 use Sealution\MacResolver\Console\Commands\InstallPackageCommand;
 use Sealution\MacResolver\Console\Commands\SeedTableFromOuiFile;
 use Illuminate\Support\ServiceProvider;
+use Sealution\MacResolver\Console\Commands\SyncMacDefinitionsCommand;
 
 class MacResolverServiceProvider extends ServiceProvider
 {
@@ -83,6 +84,7 @@ class MacResolverServiceProvider extends ServiceProvider
             GetMacAddressDetailsCommand::class,
             GetVendorDetailsCommand::class,
             SeedTableFromOuiFile::class,
+            SyncMacDefinitionsCommand::class
         ]);
     }
 
