@@ -1,0 +1,53 @@
+{
+    "name": "sealution/mac-resolver",
+    "description": "Laravel MAC Address detail resolver.",
+    "type": "library",
+    "homepage": "https://github.com/sealution/mac-vendor-lookup",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Angel Campos Muñoz",
+            "email": "angel.campos.m@outlook.com"
+        },
+        {
+            "name": "Anthony Vancauwenberghe",
+            "email": "anthony@sealution.io"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/console": "^v9",
+        "illuminate/database": "^9",
+        "illuminate/filesystem": "^9"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Sealution\\MacResolver\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sealution\\MacResolver\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sealution\\MacResolver\\Providers\\MacVendorLookupServiceProvider"
+            ],
+            "aliases": {
+                "MacVendorLookup": "Sealution\\MacResolver\\Facades\\MacVendorLookupFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
