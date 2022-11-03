@@ -1,6 +1,6 @@
 <?php
 
-namespace SealutionMacResolver\Enums;
+namespace Sealution\MacResolver\Enums;
 
 class OuiType
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace SealutionMacResolver\Console\Commands;
+namespace Sealution\MacResolver\Console\Commands;
 
 use Illuminate\Console\Command;
 
