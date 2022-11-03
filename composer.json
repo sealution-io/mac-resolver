@@ -2,7 +2,7 @@
     "name": "sealution/mac-resolver",
     "description": "Laravel MAC Address detail resolver.",
     "type": "library",
-    "homepage": "https://github.com/sealution/mac-vendor-lookup",
+    "homepage": "https://github.com/sealution-io/mac-resolver",
     "license": "MIT",
     "authors": [
         {
@@ -16,9 +16,9 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/console": "^v9",
-        "illuminate/database": "^9",
-        "illuminate/filesystem": "^9"
+        "illuminate/console": "^v9.0",
+        "illuminate/database": "^9.0",
+        "illuminate/filesystem": "^9.0"
     },
     "require-dev": {
 
@@ -34,7 +34,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+        }
     },
     "extra": {
         "laravel": {
